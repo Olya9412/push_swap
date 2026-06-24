@@ -13,7 +13,7 @@ t_stack *init_stack(int capacity)
         free(stack);
         return(NULL);
     }
-    stack->size = 0;
+    stack->top = 0;
     stack->capacity = capacity;
     return(stack);
 }

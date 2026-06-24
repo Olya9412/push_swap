@@ -4,9 +4,9 @@ void swap (t_stack *stack)
 {
     int temp;
 
-    temp = stack->arr[stack->size - 1];
-    stack->arr[stack->size - 1] = stack->arr[stack->size - 2];
-    stack->arr[stack->size - 2] = temp;
+    temp = stack->arr[stack->top - 1];
+    stack->arr[stack->top - 1] = stack->arr[stack->top - 2];
+    stack->arr[stack->top - 2] = temp;
 }
 
 void sa (t_stack *stack_a)
