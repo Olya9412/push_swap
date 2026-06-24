@@ -10,6 +10,8 @@ int main (int argc, char **argv)
 
     if (argc < 2)
         return (0);
+    if (validate_input(argc, argv))
+        return (0);
     i = 1;
     capacity = argc - 1;
     stack_a = init_stack(capacity);
@@ -26,11 +28,15 @@ int main (int argc, char **argv)
         i++;
         stack_a->top++;
     }
+   if (check_duplication(stack_a) == 1)
+        return(0);
+    //push_swap(stack_a);
     int j = 0;
     while (j < stack_a->top)
     {
         ft_putnbr_fd(stack_a->arr[j], 1);
         j++;
     }
+
     return (0);
 }
