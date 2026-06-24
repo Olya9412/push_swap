@@ -2,7 +2,7 @@
 
 void push_a (t_stack *stack_a, t_stack *stack_b)
 {
-    if (stack_a->top = 0 || !stack_a || !stack_b)
+    if (stack_a->top == 0 || !stack_a || !stack_b)
         return;
     stack_a->arr[stack_a->top] = stack_b->arr[stack_b->top - 1];
     stack_a->top++;
@@ -11,7 +11,7 @@ void push_a (t_stack *stack_a, t_stack *stack_b)
 
 void push_b (t_stack *stack_a, t_stack *stack_b)
 {
-    if (stack_b->top = 0 || !stack_a || !stack_b)
+    if (stack_b->top == 0 || !stack_a || !stack_b)
         return;
     stack_b->arr[stack_b->top] = stack_a->arr[stack_a->top - 1];
     stack_a->top--;

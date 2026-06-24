@@ -11,4 +11,5 @@ typedef struct s_stack
     int capacity;
 } t_stack;
 
+t_stack *init_stack(int capacity);
 #endif
