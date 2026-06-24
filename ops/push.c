@@ -1,12 +1,31 @@
 #include "push_swap.h"
 
-void push (t_stack *stack_a, t_stack *stack_b)
+void push_a (t_stack *stack_a, t_stack *stack_b)
 {
-    
+    if (stack_a->size = 0 || !stack_a || !stack_b)
+        return;
+    stack_a->arr[stack_a->size] = stack_b->arr[stack_b->size - 1];
+    stack_a->size++;
+    stack_b->size--;
 }
 
-void sa (t_stack *stack_a)
+void push_b (t_stack *stack_a, t_stack *stack_b)
 {
-    swap (stack_a);
-    write (1, "sa\n", 3);
+    if (stack_b->size = 0 || !stack_a || !stack_b)
+        return;
+    stack_b->arr[stack_b->size] = stack_a->arr[stack_a->size - 1];
+    stack_a->size--;
+    stack_b->size++;
+}
+
+void pa (t_stack *stack_a, t_stack *stack_b)
+{
+    push_a (stack_a, stack_b);
+    write (1, "pa\n", 3);
+}
+
+void pb (t_stack *stack_a, t_stack *stack_b)
+{
+    push_b (stack_a, stack_b);
+    write (1, "pb\n", 3);
 }
