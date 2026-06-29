@@ -17,7 +17,6 @@ int count_flag(int argc, char **argv)
         }
         else
             return (count);
-
     }
     return (count);
 }
